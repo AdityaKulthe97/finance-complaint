@@ -1,6 +1,8 @@
 # Finance-Complaint 
 
 
+# Sensor-Fault-Detection
+
 ### Problem Statement
 Complaints can give us insights into problems people are experiencing in the marketplace and help us to undestand the reason and do necessary modification in exisiting financial product if required.
 
@@ -25,46 +27,19 @@ The problem is to identify registered complaint will be disputed by customer or 
 3. Artifact Registry
 
 ## Dashboarding
-1. Grafana
-2. Prometheus
-3. Node Exporter
-4. Promtail
-5. Loki
+Grafana & Prometheus
+
 
 ## How to run?
 
 ## WorkFLow setup
-
-Create .env file
-
-```
-AWS_ACCESS_KEY_ID=
-AWS_SECRET_ACCESS_KEY=
-MONGO_DB_URL=
-TRAINING=1
-PREDICTION=1
-```
-1- Trigger
-0- Bypass
-
-Build docker image
-```
-docker build -t tc:lts .
-```
-
-Lauch docker image
-
-```
-docker run -it -v $(pwd)/finance_artifact:/app/finance_artifact  --env-file=$(pwd)/.env fc:lts
-```
-
-Steps to run project in local system
 
 
 1. Build docker image
    ```
    docker build -t fc:lts .
    ```
+
 2. Set envment variable
 ```
 export AWS_ACCESS_KEY_ID=
@@ -83,17 +58,13 @@ docker-compose down
 ``` 
 
 
-
-In your local system to setup airflow 
-
-
 AIRFLOW SETUP
 
 ## How to setup airflow
 
 Set airflow directory
 ```
-export AIRFLOW_HOME="/home/avnish/census_consumer_project/census_consumer_complaint/airflow"
+export AIRFLOW_HOME="/home/aditya/Industry Ready Project/finance-complaint/airflow"
 ```
 
 To install airflow 
@@ -108,7 +79,8 @@ airflow db init
 
 To create login user for airflow
 ```
-airflow users create  -e avnish@ineuron.ai -f Avnish -l Yadav -p admin -r Admin  -u admin
+airflow users create  -e adityakulthet@gmail.com -f Aditya -l Kulthe -p admin -r Admin  -u admin
+
 ```
 To start scheduler
 ```
