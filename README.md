@@ -19,13 +19,10 @@ The problem is to identify registered complaint will be disputed by customer or 
 
 
 ## Infrastructure Required.
+S3 Bucket
 
-1. GCP Compute Engine
-2. S3 Bucket
-3. Artifact Registry
 
-## Dashboarding
-Grafana & Prometheus
+
 
 
 ## How to run?
